@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105608136-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-105608136-2');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="robots" content="follow">
+    <meta name="desc" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ariel Behar">
+    <meta name="copyright" content="">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Aviva & Michaela's Game HUB</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!--Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Pangolin" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="home-body">
+    <span class="display-on-desktop">
+        <div class="flex-center" id="loader">
+            <img src="img/ariel.png" alt="Ariel">
+        </div>
+
+        <div class="container-fluid" id="background-container">
+            <img src="img/background-full.jpg" alt="Background City">
+        </div>
+
+        <div class="container" id="first-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="animated pulse">ДОБРЕ ДОШЛИ <span >ФЪСТЪЧКИ</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container z-depth-4" id="second-container">
+            <!--Carousel Wrapper-->
+            <div id="menu-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active scale-images" id="main-first-carousel-item">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="mt-3">Кой ще играе днес?</h4>
+                                <div class="row mb-4 mt-4 justify-content-center mx-3 py-4 align-items-center">
+                                    <div class="col-md-4">
+                                        <a href="#menu-carousel" role="button" data-slide="next" onclick="getName('Авивче')" id="aviva">
+                                            <img src="img/aviva-main.jpg" alt="Aviva" class="img-fluid hoverable z-depth-1 scale-images">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="#menu-carousel" role="button" data-slide="next" value="michaela" onclick="getName('Михаелче')">
+                                            <img src="img/michaela-main.jpg" alt="Michaela" class="img-fluid hoverable z-depth-1 scale-images">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3 offset-md-1 z-depth-1 hoverable" id="new-friend-column">
+                                        <img src="img/boy-girl-friends.jpg" alt="" class="img-fluid">
+                                        <h3>Нов приятел?</h3>
+                                        <p>Напиши си името в полето, приятелю!</p>
+                                        <form onsubmit="">
+                                            <input type="text" id="friend-name">
+                                            <a id="friend-name-button" class="btn btn-primary btn-md mt-3" href="#menu-carousel" role="button" data-slide="next" onclick="getName(document.getElementById('friend-name').value)">НАПРЕД</a>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="main-menu-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide="prev" class="go-back-button" id="first-go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="mt-3">Какво ти се играе,
+                                    <span class="girl-name"></span>?</h4>
+                                <div class="row mb-5 justify-content-center" id="games-row">
+                                    <div class="col-md-3">
+                                        <a href="#menu-carousel" role="button" data-slide-to="2">
+                                            <img src="img/disney-princess.png" alt="Disney Princesses Logo" class="game-logos">
+                                            <img src="img/princesses.jpg" alt="Disney Princesses" class="img-fluid scale-images hoverable">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#menu-carousel" role="button" data-slide-to="3">
+                                            <img src="img/the-emoji.png" alt="The Emoji Logo" class="game-logos">
+                                            <img src="img/emojis.jpg" alt="Emojis" class="img-fluid scale-images hoverable">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="img/coming-soon.jpg" alt="Disney Princesses" class="img-fluid scale-images hoverable">
+                                    </div>
+                                </div>
+                                <!-- <hr> -->
+                                <h5>Учи и печели повече</h5>
+                                <div class="row justify-content-center mb-3 mt-4">
+                                    <div class="col-md-3">
+                                        <a href="#menu-carousel" role="button" data-slide-to="5">
+                                            <img src="img/dictionary.jpg" alt="Disney Princesses" class="img-fluid scale-images hoverable">
+                                        </a>          
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#menu-carousel" role="button" data-slide-to="6">
+                                            <img src="img/europe-map.jpg" alt="Map of Europe" class="img-fluid scale-images hoverable">
+                                        </a>       
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="img/coming-soon2.jpg" alt="Coming Soon" class="img-fluid scale-images hoverable">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Carousel item #main-menu-carousel-item-->
+                    <div class="carousel-item" id="words-game-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide-to="1" class="go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+
+                        <div class="score z-depth-1">
+                            <p class="d-inline-block">Точки: </p>
+                            &nbsp;&nbsp;&nbsp;
+                            <p id="words-points" class="animated d-inline-block text-right"></p>
+
+                            <p>Спечелени принцеси:</p>
+                            <div id="princesses-won">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h4 class="mt-3">Познай думичката</h4>
+                                <p class="mt-4">Познай думичките и печели принцеси. За всеки 5 правилни отговора ще получиш по една принцеса на Дисни награда. Стигнеш ли 60 точки ги печелиш всички, а достигайки 75 ти носи специална изненада! Давай смело, фъстък! </p>
+                            </div>
+                        </div>
+                        <div class="row words-game-components justify-content-center align-items-center z-depth-1" id="words-game-components-row">
+                            <a name="" id="words-game-start-button" class="btn btn-primary btn-lg animated pulse infinite" href="#" role="button">СТАРТИРАЙ ИГРАТА</a>
+                            <div class="col-md-7 words-game-components d-none justify-content-center align-items-center">
+                                <p id="bulg-word" class="z-depth-2"></p>
+                            </div>
+                            <div class="col-md-5 words-game-components d-none">
+                                <img src="" alt="" id="word-pic" class="z-depth-2">
+                            </div>
+                            <div class="col-md-6 mt-5 words-game-components d-none">
+                                <form onsubmit="checkInput()">
+                                    <input type="text" id="player-submit-text" autocomplete="off" placeholder="">
+                                    <input type="submit" value="ПРОВЕРИ" id="submit-button" class="btn btn-primary btn-lg mt-3">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Carousel item #words-game-carousel-item -->
+                    <div class="carousel-item" id="countries-game-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide-to="1" class="go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+                        <!-- <a href="#" id="restart-countries">Рестаритрай играта</a> -->
+                        <div class="z-depth-1" id="score-countries">
+                            <p class="d-inline-block">Точки: </p>
+                            &nbsp;&nbsp;&nbsp;
+                            <p id="countries-points" class="animated  d-inline-block text-right"></p>
+
+                            <p>Спечелени емоджита:</p>
+                            <div id="emojis-won">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h4 class="mt-3">Коя е държавата?</h4>
+                                <p class="mt-4">Познавай държавите на картата и печели по един Емоджи герой за всеки 6 правилни отговора. Сгрешиш ли, не се притеснявай! Имаш още един допълнителен опит преди да се смени картата. Давай смело, фъстък!</p>
+                            </div>
+                        </div>
+                        <div class="row countries-game-components justify-content-center align-items-center z-depth-1" id="countries-game-components-row">
+                            <img src="img/emojis/emojis.png" alt="Emojis" id="emojis-poster">
+                            <a name="" id="countries-start-button" class="btn btn-primary btn-lg animated pulse infinite" href="#" role="button">СТАРТИРАЙ ИГРАТА</a>
+
+                            <div class="col-md-7 countries-game-components d-none justify-content-center align-items-center">
+                                <img src="" alt="Country" id="map-image" class="img-fluid z-depth-2">
+                            </div>
+                            <div class="col-md-4 countries-game-components d-none pt-5">
+                                <img src="" alt="Flag" id="flag-image" class="z-depth-2 img-fluid">
+                                <p id="country-name"></p>
+                                <button class="btn waves-effect btn-rounded possible-answers z-depth-2">
+                                </button>
+                                <button class="btn waves-effect btn-rounded possible-answers z-depth-2">
+                                </button>
+                                <button class="btn waves-effect btn-rounded possible-answers z-depth-2">
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- /Carousel item #words-game-carousel-item -->
+
+                    <!-- Math game carousel item -->
+                    <div class="carousel-item" id="math-game-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide-to="1" class="go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+                        
+                        
+                    </div>
+                    <!--/ Math game carousel item -->
+
+                    <!-- learn-words-carousel-item -->
+                    <div class="carousel-item" id="learn-words-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide-to="1" class="go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+                            <div id="display-all-words-container">
+                                <ul id="display-all-words">
+
+                                </ul>
+                            </div>
+                        <div class="row">
+                            <div class="col-md-7 offset-md-1">
+                                <h4 class="mt-3">Речник</h4>
+                                <p class="mt-4">Кликни върху думите в дясно и виж техния превод на английски. Приятно подготвяне за играта с принцесите!</p>
+                            </div>
+    
+                            <div class="row" id="learn-words-components-row">
+                                <div class="col-md-5 flex-column flex-center">
+                                    <h3 id="learn-words-bulg-word" class="d-inline">Речник</h3>
+                                    <img src="" alt="" id="learn-words-pic">
+                                    <h3 id="learn-words-eng-word" class="d-inline">Dictionary</h3>
+                                </div>    
+                            </div> 
+                        </div>
+                    </div><!--/learn-words-carousel-item -->
+
+                    <!-- learn-countries-carousel-item -->
+                    <div class="carousel-item" id="learn-countries-carousel-item">
+                        <a href="#menu-carousel" role="button" data-slide-to="1" class="go-back-button">
+                            <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Върни се</a>
+                            <div id="display-all-countries-container">
+                                <ul id="display-all-countries">
+
+                                </ul>
+                            </div>
+                        <div class="row">
+                            <div class="col-md-7 offset-md-1">
+                                <h4 class="mt-3">Карта на Европа</h4>
+                                <p class="mt-4">Кликни върху държавите в дясно и виж тяхната столица, знаме и местоположение на картата. Приятно подготвяне за играта с емоджитата!</p>
+                            </div>
+    
+                            <div class="row" id="learn-countries-components-row">
+                                <div class="col-md-4 flex-column flex-center pl-0">
+                                    <h3 class="d-inline">Държава:<br> <span id="learn-countries-country"></span></h3>
+                                    <img src="" alt="" id="learn-countries-pic">
+                                    <h3 class="d-inline">Столица:<br> <span id="learn-countries-capital"></span></h3>
+                                </div>    
+                            </div> 
+                        </div>
+
+                    </div><!--/learn-words-carousel-item -->
+
+                </div><!--/Slides-->       
+            </div><!--/Carousel Wrapper-->
+        </div><!--/Second Container -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#pics-modal" id="modal-button">
+            Launch demo modal
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="pics-modal" tabindex="-1" role="dialog" aria-labelledby="pics-modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pics-modalLabel">Честито,
+                            <span class="girl-name"></span>! Спечели
+                            <span class="character-name"></span>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="" alt="" id="pics-modal-image" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Затвори прозореца</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+    <span class="display-on-mobile">
+        <div class="container">
+            <div class="row flex-center text-center" style="height: 100vh">
+                <div class="col-12">
+                    <h4>Приложението е приспособено само за апарати с голями екрани. Моля, отворете го отново през домашен компютър или лаптоп.</h4>
+                    <hr class="my-5">
+                    <h4>The application has been optimized for big screen devices only. Please try opening it again through a PC or a laptop.</h4>
+                </div>
+            </div>
+        </div>
+    </span>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- MAIN JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
