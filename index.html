@@ -243,7 +243,7 @@
                     <div class="z-depth-1" id="score-hebrew">
                         <p class="d-inline-block">Точки: </p>
                         &nbsp;&nbsp;&nbsp;
-                        <p id="hebrew-points" class="animated  d-inline-block text-right"></p>
+                        <p id="hebrew-points" class="animated d-inline-block text-right"></p>
                     
                         <p>Спечелени герои:</p>
                         <div id="sofia-characters-won">
@@ -253,18 +253,33 @@
                     <div class="row">
                         <div class="col-md-9">
                             <h4 class="mt-3">Напиши ме на Иврит</h4>
-                            <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa corporis adipisci saepe omnis tenetur cumque autem velit enim suscipit, veniam blanditiis numquam in porro dolorum cupiditate quaerat voluptas aperiam.</p>
+                            <p class="mt-4">Напиши изписаното изречение на иврит и печели по един герой от детското на София за всеки 4 правилни отговора. Можеш да използваш истинска клавиатура или помощната за да изпишеш правилно всяка една буква. Давай смело, фъстък!</p>
                         </div>
                     </div>
                     <div class="row hebrew-game-components justify-content-center align-items-center z-depth-1" id="hebrew-game-components-row">
                         <a name="" id="hebrew-start-button" class="btn btn-primary btn-lg animated pulse infinite" href="#" role="button">СТАРТИРАЙ ИГРАТА</a>
   
-                        <div class="offset-md-3 col-md-5 hebrew-game-components d-none justify-content-center align-items-center">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt id eaque aspernatur, vero distinctio atque neque quas maiores ab vitae quidem, laudantium molestias quasi repudiandae laborum iure facilis hic corporis minus, temporibus sequi blanditiis quisquam. Rem assumenda soluta molestiae. Ipsum reiciendis quaerat dolore nemo placeat enim harum voluptatem quisquam sequi!
+                        <div class="col-md-12 hebrew-game-components d-none justify-content-center align-items-center pt-4">
+                            <div id="hebrew-phrase-div">
+                                <span id="hebrew-phrase" class="z-depth-4"></span>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="translation-reading-div">
+                                            <span>Превод на български: </span>
+                                            <p id="hebrew-phrase-translation"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="translation-reading-div">
+                                            <span>Прочит на кирилица: </span>
+                                            <p id="hebrew-phrase-transcription"></p>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
                         </div>
+                        <div class="col-md-7 px-0 hebrew-game-components d-none text-center">
 
-                        <div class="col-md-7 hebrew-game-components d-none pt-5 text-center">
-                            <!-- <img src="img/keyboard/hebrew-keyboard.png" alt="Hebrew Keyboard" class="img-fluid"> -->
                             <div>
                                 <img src="img/keyboard/q.png" alt="q" class="letter-key">
                                 <img src="img/keyboard/w.png" alt="w" class="letter-key">
@@ -276,21 +291,21 @@
                                 <img src="img/keyboard/i.png" alt="i" class="letter-key">
                                 <img src="img/keyboard/o.png" alt="o" class="letter-key">
                                 <img src="img/keyboard/p.png" alt="p" class="letter-key">
-                                <img src="img/keyboard/{.png" alt="{" class="letter-key">
-                                <img src="img/keyboard/}.png" alt="}" class="letter-key"> 
+                                <img src="img/keyboard/{.png" alt="{" class="disabled">
+                                <img src="img/keyboard/}.png" alt="}" class=" disabled"> 
                             </div>
                             <div class="my-1">
-                                <img src="img/keyboard/a.png" alt="q" class="letter-key">
-                                <img src="img/keyboard/s.png" alt="w" class="letter-key">
-                                <img src="img/keyboard/d.png" alt="e" class="letter-key">
-                                <img src="img/keyboard/f.png" alt="r" class="letter-key">
-                                <img src="img/keyboard/g.png" alt="t" class="letter-key">
-                                <img src="img/keyboard/h.png" alt="y" class="letter-key">
-                                <img src="img/keyboard/j.png" alt="u" class="letter-key">
-                                <img src="img/keyboard/k.png" alt="i" class="letter-key">
-                                <img src="img/keyboard/l.png" alt="o" class="letter-key">
-                                <img src="img/keyboard/colon.png" alt="colon" class="letter-key">
-                                <img src="img/keyboard/apostrophe.png" alt="apostrophe" class="letter-key">
+                                <img src="img/keyboard/a.png" alt="a" class="letter-key">
+                                <img src="img/keyboard/s.png" alt="s" class="letter-key">
+                                <img src="img/keyboard/d.png" alt="d" class="letter-key">
+                                <img src="img/keyboard/f.png" alt="f" class="letter-key">
+                                <img src="img/keyboard/g.png" alt="g" class="letter-key">
+                                <img src="img/keyboard/h.png" alt="h" class="letter-key">
+                                <img src="img/keyboard/j.png" alt="j" class="letter-key">
+                                <img src="img/keyboard/k.png" alt="k" class="letter-key">
+                                <img src="img/keyboard/l.png" alt="l" class="letter-key">
+                                <img src="img/keyboard/colon.png" alt=";" class="letter-key">
+                                <img src="img/keyboard/apostrophe.png" alt="'" class="letter-key">
                             </div>
                             <div>
                                 <img src="img/keyboard/z.png" alt="z" class="letter-key">
@@ -298,21 +313,25 @@
                                 <img src="img/keyboard/c.png" alt="c" class="letter-key">
                                 <img src="img/keyboard/v.png" alt="v" class="letter-key">
                                 <img src="img/keyboard/b.png" alt="b" class="letter-key">
-                                <img src="img/keyboard/n.png" alt="h" class="letter-key">
-                                <img src="img/keyboard/m.png" alt="j" class="letter-key">
-                                <img src="img/keyboard/left-arrow.png" alt="k" class="letter-key">
-                                <img src="img/keyboard/right-arrow.png" alt="l" class="letter-key">
-                                <img src="img/keyboard/question-mark.png" alt="colon" class="letter-key">
+                                <img src="img/keyboard/n.png" alt="n" class="letter-key">
+                                <img src="img/keyboard/m.png" alt="m" class="letter-key">
+                                <img src="img/keyboard/left-arrow.png" alt="," class="letter-key">
+                                <img src="img/keyboard/right-arrow.png" alt="." class="letter-key">
+                                <img src="img/keyboard/question-mark.png" alt="/" class="letter-key">
                             </div>
                             <div class="mt-1">
                                 <img src="img/keyboard/spacebar.png" alt="spacebar" class="letter-key">
 
                             </div>
                         </div>
-                        <div class="col-md-5 hebrew-game-components d-none pt-5">
+                        <div class="col-md-5 hebrew-game-components d-none">
                             <form action="">
-                                <textarea name="" id="hebrew-player-input" dir="rtl"></textarea>
-
+                            <input type="text" id="hebrew-player-input" dir="rtl" placeholder="Трябва да се пише с букви на Иврит" autocomplete="off">
+                                <div class="d-flex justify-content-around">
+                                    <img src="img/keyboard/backspace.png" alt="Backspace" id="backspace-key">
+                                    <img src="img/keyboard/enter.png" alt="Enter" id="enter-key">
+                                </div>
+                            <input type="submit" class="d-none" id="hebrew-phrase-submit">
                             </form>
                         </div>
                     </div>
@@ -391,7 +410,7 @@
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#pics-modal" id="modal-button">
-            Launch demo modal
+            Launch modal
         </button>
     <!-- Modal -->
     <div class="modal fade" id="pics-modal" tabindex="-1" role="dialog" aria-labelledby="pics-modalLabel" aria-hidden="true">
